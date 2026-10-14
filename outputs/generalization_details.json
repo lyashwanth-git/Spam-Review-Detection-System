@@ -1,0 +1,146 @@
+[
+  {
+    "split": "Random stratified split",
+    "train_label_counts": {
+      "0": 8400,
+      "1": 8396
+    },
+    "test_label_counts": {
+      "0": 2100,
+      "1": 2100
+    },
+    "confusion_matrix_labels_0_1": [
+      [
+        1434,
+        666
+      ],
+      [
+        763,
+        1337
+      ]
+    ],
+    "test_categories": [
+      "Apparel",
+      "Automotive",
+      "Baby",
+      "Beauty",
+      "Books",
+      "Camera",
+      "Electronics",
+      "Furniture",
+      "Grocery",
+      "Health & Personal Care",
+      "Home",
+      "Home Entertainment",
+      "Home Improvement",
+      "Jewelry",
+      "Kitchen",
+      "Lawn and Garden",
+      "Luggage",
+      "Musical Instruments",
+      "Office Products",
+      "Outdoors",
+      "PC",
+      "Pet Products",
+      "Shoes",
+      "Sports",
+      "Tools",
+      "Toys",
+      "Video DVD",
+      "Video Games",
+      "Watches",
+      "Wireless"
+    ],
+    "train_unique_product_ids": 15355,
+    "test_unique_product_ids": 4109,
+    "product_id_overlap": 609
+  },
+  {
+    "split": "Product-held-out split",
+    "train_label_counts": {
+      "0": 8400,
+      "1": 8374
+    },
+    "test_label_counts": {
+      "0": 2100,
+      "1": 2122
+    },
+    "confusion_matrix_labels_0_1": [
+      [
+        1482,
+        618
+      ],
+      [
+        752,
+        1370
+      ]
+    ],
+    "test_categories": [
+      "Apparel",
+      "Automotive",
+      "Baby",
+      "Beauty",
+      "Books",
+      "Camera",
+      "Electronics",
+      "Furniture",
+      "Grocery",
+      "Health & Personal Care",
+      "Home",
+      "Home Entertainment",
+      "Home Improvement",
+      "Jewelry",
+      "Kitchen",
+      "Lawn and Garden",
+      "Luggage",
+      "Musical Instruments",
+      "Office Products",
+      "Outdoors",
+      "PC",
+      "Pet Products",
+      "Shoes",
+      "Sports",
+      "Tools",
+      "Toys",
+      "Video DVD",
+      "Video Games",
+      "Watches",
+      "Wireless"
+    ],
+    "train_unique_product_ids": 15084,
+    "test_unique_product_ids": 3771,
+    "product_id_overlap": 0
+  },
+  {
+    "split": "Category-held-out split",
+    "train_label_counts": {
+      "0": 8400,
+      "1": 8396
+    },
+    "test_label_counts": {
+      "0": 2100,
+      "1": 2100
+    },
+    "confusion_matrix_labels_0_1": [
+      [
+        1374,
+        726
+      ],
+      [
+        675,
+        1425
+      ]
+    ],
+    "test_categories": [
+      "Grocery",
+      "Health & Personal Care",
+      "Lawn and Garden",
+      "Musical Instruments",
+      "Sports",
+      "Video Games"
+    ],
+    "train_unique_product_ids": 15116,
+    "test_unique_product_ids": 3739,
+    "product_id_overlap": 0
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "accuracy": 0.6595238095238095,
+  "precision": 0.6627793974732751,
+  "recall": 0.6495238095238095,
+  "f1": 0.656084656084656,
+  "macro_f1": 0.6594897584996595,
+  "test_records": 4200,
+  "train_records": 12597,
+  "validation_records": 4199,
+  "total_records": 20996,
+  "best_model": "Logistic Regression - Word TF-IDF",
+  "best_validation_macro_f1": 0.661797984280638,
+  "label_mapping": {
+    "0": "Genuine / truthful",
+    "1": "Deceptive / suspicious"
+  },
+  "deployment_model_refit_on_all_labeled_rows": true,
+  "test_metrics_source": "Selected model evaluated on held-out test data before final refit",
+  "selection_method": "Validation macro F1; final test split not used for selection"
+}

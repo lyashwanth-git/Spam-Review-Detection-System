@@ -1,0 +1,84 @@
+SPAM REVIEW DETECTION — DATASET AUDIT
+=======================================================
+Dataset file: amazon_product_reviews_cleaned.csv
+Rows with valid binary labels and non-empty text: 20,996
+Columns: review_text, label, label_name, rating, verified_purchase, product_category, product_id, product_title, review_title, doc_id
+
+1. LABEL BALANCE
+label
+Genuine (0)      10500
+Deceptive (1)    10496
+
+2. DUPLICATE REVIEW TEXT
+Exact duplicate review_text rows beyond first: 0
+Duplicate after lowercase + whitespace normalization: 0
+Normalized text strings that have conflicting labels: 0
+
+3. METADATA COVERAGE
+product_category: missing=0; unique=30
+product_id: missing=0; unique=18,855
+product_title: missing=0; unique=18,863
+rating: missing=0; unique=5
+verified_purchase: missing=0; unique=2
+doc_id: missing=0; unique=20,996
+Rows with a product_id appearing more than once: 4,091
+Unique product IDs: 18,855
+
+4. LABEL RATE BY PRODUCT CATEGORY
+                        reviews  genuine  deceptive  deceptive_rate
+product_category                                                   
+Camera                      699      350        349           0.499
+Home Improvement            699      350        349           0.499
+Tools                       699      350        349           0.499
+Toys                        699      350        349           0.499
+Beauty                      700      350        350           0.500
+Books                       700      350        350           0.500
+Baby                        700      350        350           0.500
+Apparel                     700      350        350           0.500
+Furniture                   700      350        350           0.500
+Grocery                     700      350        350           0.500
+Home                        700      350        350           0.500
+Health & Personal Care      700      350        350           0.500
+Home Entertainment          700      350        350           0.500
+Jewelry                     700      350        350           0.500
+Electronics                 700      350        350           0.500
+Automotive                  700      350        350           0.500
+Lawn and Garden             700      350        350           0.500
+Kitchen                     700      350        350           0.500
+Luggage                     700      350        350           0.500
+Musical Instruments         700      350        350           0.500
+PC                          700      350        350           0.500
+Pet Products                700      350        350           0.500
+Office Products             700      350        350           0.500
+Outdoors                    700      350        350           0.500
+Sports                      700      350        350           0.500
+Shoes                       700      350        350           0.500
+Video DVD                   700      350        350           0.500
+Video Games                 700      350        350           0.500
+Watches                     700      350        350           0.500
+Wireless                    700      350        350           0.500
+
+5. LABEL ASSOCIATION WITH METADATA (DIAGNOSTIC ONLY)
+
+rating:
+label   genuine_fraction  deceptive_fraction
+rating                                      
+1                  0.495               0.505
+2                  0.474               0.526
+3                  0.504               0.496
+4                  0.497               0.503
+5                  0.504               0.496
+
+verified_purchase:
+label              genuine_fraction  deceptive_fraction
+verified_purchase                                      
+N                             0.181               0.819
+Y                             0.754               0.246
+
+6. INTERPRETATION
+- Exact duplicate text should not appear in both train and test partitions.
+- A product-held-out split tests performance on products not seen during training.
+- A category-held-out split is a harder test of transfer to unseen product categories.
+- Strong metadata/label association is a warning to investigate source construction; it is not proof of bad labels.
+- Rating and verified-purchase fields are NOT used as model input by the text-only classifier.
+- Dataset labels are inherited from the source corpus and are not independently verified by this audit.

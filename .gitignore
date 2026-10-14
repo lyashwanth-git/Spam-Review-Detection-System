@@ -1,6 +1,9 @@
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-.vscode/
-.idea/
+*.py[cod]
+.venv/
+venv/
+models/*.joblib
+models/model_metadata.json
+outputs/*.csv
+outputs/*.png
+data/*.db

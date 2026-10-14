@@ -1,0 +1,4 @@
+Model,Validation Macro F1,Validation Accuracy,Validation Records
+Logistic Regression - Word TF-IDF,0.661797984280638,0.6618242438675875,4199
+Multinomial Naive Bayes - Word TF-IDF,0.6561070174324165,0.6561085972850679,4199
+Linear SVM - Word TF-IDF,0.639676031615287,0.6396761133603239,4199
